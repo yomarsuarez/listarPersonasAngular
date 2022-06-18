@@ -1,0 +1,18 @@
+<form class="item">
+  <input
+    type="text"
+    name="nombre"
+    id="nombre"
+    placeholder="nombre"
+    [(ngModel)]="nombreInput"
+  />
+
+  <input
+    type="text"
+    name="apellido"
+    id="apellido"
+    placeholder="apellido"
+    [(ngModel)]="apellidoInput"
+  />
+  <button type="submit" (click)="onAgregarPersona()">+</button>
+</form>
