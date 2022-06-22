@@ -13,6 +13,8 @@ import { PersonasComponent } from './personas/personas.component';
 import { ErrorComponent } from './error/error.component';
 import { DataServices } from './data.services';
 import { LoginComponent } from './login/login.component';
+import { LoginService } from './login/login.service';
+import { LoginGuard } from './login/login-guard.service';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,13 @@ import { LoginComponent } from './login/login.component';
     LoginComponent,
   ],
   imports: [BrowserModule, FormsModule, AppRoutingModule, HttpClientModule],
-  providers: [LoggingService, PersonaService, DataServices],
+  providers: [
+    LoggingService,
+    PersonaService,
+    DataServices,
+    LoginGuard,
+    LoginService,
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
