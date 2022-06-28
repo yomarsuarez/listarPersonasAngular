@@ -1,6 +1,41 @@
+Documentación Baguer S.A.S.
+
 # ListadoPersonas
 
-Hola Modificaciones
+Proyecto Generado en Angular 13, el cual se basa en un CRUD en el que inicialmente realizamon un login, y posterior a ello mediante los metodos POST, GET, PUT y DELETE realizamos la funcionalidad de crear, leer, editar y eliminar cada uno de los elementos.
+
+## Login
+
+En este proyecto personal y académico, utilizo los servicios de Firebase para la base de datos y como despliegue en desarrollo.
+
+Para la autenticación se usa el usuario yomaralveiro.suarez@gmail.com y la clave es: 1234566.
+
+Respecto a la protección de rutas utilizamos los Guards, archivo login-guard, los cuales limitan o permiten el acceso a la aplicación según si el usuario se encuentra autenticado. En la autenticación creamos un servicio, archivo login.service, el cual nos devuelve el token para que permita el acceso del usuario autenticado.
+Posteiormente el componente de typescript, archivo login.component.ts valida el formulario y permite el acceso, esto se refleja en la plantilla HTML del mismo componente.
+
+## Formulario
+
+En este componente, validamos si la información que se agrega, va a ser guardada o editada, esto se define si la persona registrada tiene un ID, si tiene ID es para editar, caso contrario es un registro nuevo.
+
+## Personas
+
+El componente personas tiene el arreglo donde se almacena la información, y mediante el ciclo de vida inicial OnInit y el medoto setPersonas, lista la información que se encuentra en la base de datos Firebase. Esta información se hace visible en la plantilla HTML usando la directiva \*ngFor la cual itera sobre cada unos de los elementos del arreglo y los va mostrando en pantalla.
+
+## Manejo de rutas con el AppRoutingModule
+
+Mediante este modulo, podemos navegar a cada unos de los componentes solicitados, obvimante según la autenticación de los usuarios.
+
+## Componentes Padre AppComponent
+
+En la plantilla HTML verificamos mediante la directiva \*ngIf si el usuario se encuentra autenticado.
+
+## DataServices
+
+En este serivio, utilizamos el serivicio HttpClient para realizar las peticiones. Y en este archivo observamos los metodos cargarPersonas, guardarPersonas, modificarPersona y eliminarPersona.
+
+Fin breve documentación de proyecto realizado en Angular13.
+
+==============================================================================
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.5.
 
